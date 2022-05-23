@@ -1,37 +1,40 @@
-## Welcome to GitHub Pages
+## Welcome to my little page!
 
-You can use the [editor on GitHub](https://github.com/VintageCake/vintagecake.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+There really isn't that much going on here at the moment, but feel free to check out some of my repositories on my GitHub! I largely just upload some of my school projects on there. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+I've recently gotten into doing a few CTFs with a group that I like, my writeups are over [here](https://github.com/VintageCake/HTB-CTF)!
 
-### Markdown
+If you feel like you have any critical input as to what kind of cool stuff I should put here, feel free to do so in the issues section of this page repo.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### C++ shenanigans and highlighted project
 
-```markdown
-Syntax highlighted code block
+Probably one of the nicer things I've done on my GitHub is create a circuit + software solution to measure electric fences, where I meshed these small devices together to get additional range as well. For this to work, I created my own routing protocol based on RIP (but wireless).
 
-# Header 1
-## Header 2
-### Header 3
+One of the nice things you get with C++ is that unions aren't removed, so you can do fun things with picking apart individual bytes of a larger data structure - making it really easy to create fields for a protocol message.
 
-- Bulleted
-- List
+```C++
+struct route {
+    byte base_flag;
+    unsigned int dst_id;
+    byte most_rssi;
+    byte hop_count;
+    unsigned int via_id;
+    byte age; // Aging variable, decremented on a timer
+};
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+typedef union route_union {
+  route fields = {0x00, 0x0000, 0x00, 0x00, 0x0000, 0x00};
+  byte bytes[sizeof(fields)];
+} route_union;
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+Anyway, the repo can be found [here](https://github.com/VintageCake/ElectricFenceLoRa).
 
-### Jekyll Themes
+In addtion to this, I've implemented a few RFC standards for school assignments - I'd like to think of my TFTP server as "pretty good", this can can be found [here](https://github.com/VintageCake/1DV701_pset3), although the [HTTP server](https://github.com/VintageCake/1DV701_pset2) was by far the bigger project to pull off. Both of these are created in Java.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/VintageCake/vintagecake.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### CTFs!
 
-### Support or Contact
+So far, I've only participated in a few CTFs, with HTB being the only CTF having a writeup currently. There will be more to come! :)
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### Contact
+<lovesamuelsson@outlook.com>
