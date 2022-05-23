@@ -1,4 +1,4 @@
-## Welcome to my little page!
+## Welcome to my page!
 
 There really isn't that much going on here at the moment, but feel free to check out some of my repositories on my GitHub! I largely just upload some of my school projects on there. 
 
@@ -30,7 +30,7 @@ typedef union route_union {
 
 Anyway, the repo can be found [here](https://github.com/VintageCake/ElectricFenceLoRa).
 
-In addtion to this, I've implemented a few RFC standards for school assignments - I'd like to think of my TFTP server as "pretty good", this can can be found [here](https://github.com/VintageCake/1DV701_pset3), although the [HTTP server](https://github.com/VintageCake/1DV701_pset2) was by far the bigger project out of both of them. Something to note is that these things are in Java.
+In addtion to this, I've implemented a few RFC standards for school assignments - I'd like to think of my TFTP server as "pretty good", this can can be found [here](https://github.com/VintageCake/1DV701_pset3), although the [HTTP server](https://github.com/VintageCake/1DV701_pset2) was by far the bigger project out of both of them. Something to note is that these are in Java, since the 1DV701 course is built on the two preceeding Java courses.
 
 ### CTFs!
 
